@@ -37,7 +37,7 @@ transmission = st.selectbox('Select the type of Transmission',df['transmission']
 owner = st.selectbox('Select the Type of Owner',df['owner'].unique())
 
 
-df={ "Brand_name":  Brand_name,"year": year,"km_driven":Km_driven,"fuel":fuel,"seller_type"
+d={ "Brand_name":  Brand_name,"year": year,"km_driven":Km_driven,"fuel":fuel,"seller_type"
  : seller_type,"transmission":transmission,"owner":owner}
 
 test=pd.DataFrame(data=d,index=[0])

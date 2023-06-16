@@ -19,9 +19,8 @@ def main():
     st.set_page_config(
         page_title="🚗CAR DEKHO🚗",
         page_icon=":car:",
-        layout="centered",
+        layout="centered",)
         #background_color="#FFA500" # Orange background color
-        )
 main()
 
 st.title('🚗 Used Car Selling Price Prediction App')
@@ -30,7 +29,7 @@ st.header('Fill the datails to predict used Car selling Price')
 Brand_name = st.selectbox('Chose the Brand',df['Brand_name'].unique())
 #Age = st.sidebar.number_input('Age of vehicle in years (1-32)', value=10)
 year = st.selectbox('Chose the manufactured year of the car',df['year'].unique())
-Km_driven = st.number_input('Enter the kilometers reading of the vehicle', value=300000)
+Km_driven = st.number_input('Enter the kilometers reading of the vehicle', value=30000)
 fuel = st.selectbox('Fuel Type',['Petrol','Diesel','CNG','LPG','Electric'])
 seller_type = st.selectbox('Seller type',df['seller_type'].unique())
 transmission = st.selectbox('Select the type of Transmission',df['transmission'].unique())
@@ -42,4 +41,4 @@ d={ "Brand_name":  Brand_name,"year": year,"km_driven":Km_driven,"fuel":fuel,"se
 
 test=pd.DataFrame(data=d,index=[0])
 if st.button('Predict Car Selling Price \u20B9'):
-   st.success(loaded_pipeline.predict(test)) 
+   st.success (loaded_pipeline.predict(test)) 
